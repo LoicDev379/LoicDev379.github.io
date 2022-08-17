@@ -1,0 +1,77 @@
+/* @font-face {
+    font-family: 'FontName';
+    src: url('FileName.eot');
+    /* font-style: normal;
+    font-weight: normal; /
+} */
+
+* {
+    font-size: 12pt;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    color: beige;
+    background-image: url("../img/img1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 500px;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 18pt;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.input {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 4px;
+    margin: 10px 0;
+}
+
+input {
+    width: 95%;
+    background: none;
+    border: none;
+    outline: none;
+    vertical-align: middle;
+}
+
+.submit {
+    background-color: #41666c;
+    padding: 6px 0;
+    cursor: pointer;
+    text-align: center;
+}
+
+.submit:hover {
+    filter: brightness(1.2);
+}
+
+.input i {
+    height: 16px;
+    width: 14px;
+    cursor: pointer;
+    vertical-align: middle;
+    color: black;
+    margin: 0 -5px;
+}
+
+#eye {
+    color: red;
+}
+
+.show {
+    display: none;
+}
