@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/font-awesome/FontAwesome Documentation/css/all.min.css">
+</head>
+
+<body>
+    <form name="form" id="form" method="post">
+        <h1>Authentification</h1>
+
+        <div class="input">
+            <input type="text" name="login" placeholder="Enter your name...">
+        </div>
+
+        <div class="input">
+            <input type="password" name="password" id="pass" placeholder="Enter your password...">
+            <i class="show" id="eye"></i>
+        </div>
+
+        <div class="input submit" onclick="document.form.submit()">
+            S'authentifier
+        </div>
+
+    </form>
+
+    <script>
+        e = true;
+        var eye = document.querySelector("#eye");
+        var pass = document.querySelector("#pass");
+
+        pass.addEventListener("input", () => {
+            eye.className = "far fa-eye-slash";
+        })
+
+        eye.onclick = () => {
+            if (e) {
+                pass.setAttribute("type", "text");
+                eye.className = "far fa-eye";
+                eye.style.color = "green";
+                e = false;
+            } else {
+                pass.setAttribute("type", "password");
+                eye.className = "far fa-eye-slash";
+                eye.style.color = "red";
+                // eye.style.fontSize = "10px";
+                e = true;
+            }
+        }
+    </script>
+</body>
+
+</html>
